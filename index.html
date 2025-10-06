@@ -1,101 +1,396 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="XUE28z6FuOHPdpBgG6b5glnPAutGeVHKXloEfhEiD0M" />
-    <title>Muhammed Sinan K V</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammed Sinan K V — Portfolio</title>
+  <meta name="description" content="Portfolio of Muhammed Sinan K V — Full Stack (MERN) Developer" />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6d28d9;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxw:1100px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071022 0%, #071827 45%, #071a2b 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    /* header */
+    header{
+      display:flex;
+      gap:var(--gap);
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:22px;
+    }
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .avatar{
+      width:68px;height:68px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#3b82f6);
+      display:flex;align-items:center;justify-content:center;font-weight:700;
+      color:white;font-size:20px;box-shadow:0 6px 18px rgba(13,18,30,0.6);
+    }
+    h1{margin:0;font-size:26px}
+    .role{color:var(--muted); margin-top:6px; font-size:14px}
+
+    nav{display:flex;gap:10px;align-items:center}
+    .btn {
+      background:transparent;border:1px solid rgba(255,255,255,0.06);
+      color:inherit;padding:8px 12px;border-radius:10px;font-size:13px;
+      cursor:pointer;text-decoration:none;
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent),#3b82f6);
+      color:white;border:none;box-shadow:0 6px 18px rgba(109,40,217,0.18);
+    }
+
+    /* main grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr; padding-bottom:40px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+
+    /* card */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* About */
+    .about{
+      display:flex;gap:18px;align-items:flex-start;
+    }
+    .about .photo{
+      width:120px;height:120px;border-radius:14px;background:linear-gradient(135deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;font-size:36px;
+      color:#fff;flex-shrink:0;
+    }
+    .about p{margin:0;color:var(--muted);line-height:1.5}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px;color:#dbeafe;border:1px solid rgba(255,255,255,0.02)}
+
+    /* Projects */
+    .projects-list{display:grid;gap:12px}
+    .project{
+      display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.03)
+    }
+    .project h3{margin:0;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .project .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .chip{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+    .project .actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .link {text-decoration:none;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);font-size:13px;background:transparent;color:#e6eef6}
+    .link.secondary{background:transparent}
+    .note{font-size:12px;color:#a3b0bf;margin-top:6px}
+
+    /* Right column */
+    .right .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-item{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+    .edu{color:var(--muted);font-size:14px}
+
+    footer{text-align:center;color:var(--muted);margin-top:22px;font-size:13px}
+
+    /* small animations */
+    .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.7);display:none;align-items:center;justify-content:center;padding:24px;z-index:80}
+    .modal{width:100%;max-width:760px;background:linear-gradient(180deg, #071026, #061424);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.04)}
+    .modal h4{margin:0}
+    .close{margin-left:auto;background:transparent;border:none;color:var(--muted);font-size:18px;cursor:pointer}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .links{display:flex;gap:8px;flex-wrap:wrap}
+    a.external{color:#c7d2fe;text-decoration:underline}
+  </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
     <header>
-      <h1>Muhammed Sinan K V</h1>
-      <p><strong>Full Stack Developer</strong> | Malappuram, India</p>
-      <p>Email: <a href="mailto:muhammedsinankv06@gmail.com">muhammedsinankv06@gmail.com</a> | Phone: <a href="tel:+917025337150">7025337150</a></p>
-      <p><a href="https://mskv17.github.io/portfolio/" target="_blank" rel="noopener">https://mskv17.github.io/portfolio/</a></p>
+      <div class="brand">
+        <div class="avatar">MS</div>
+        <div>
+          <h1>Muhammed Sinan <span style="color:var(--accent)">K V</span></h1>
+          <div class="role">Full Stack Developer (MERN) — Building scalable web apps with clean, efficient code</div>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="https://mskv17.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
+      </nav>
     </header>
 
-    <section>
-      <h2>Summary</h2>
-      <p>
-        I'm a MERN Stack Developer, skilled in MongoDB, Express.js, React.js, and Node.js.
-        I have experience building full -stack web applications from scratch, handling both the front -end and back -end. I've worked on projects like a to -do and mail productivity app, a scalable e commerce platform, and an online payment wallet, all of which are li ve and available in my portfolio.
-        I enjoy solving real -world problems through clean and efficient code, and I'm always learning new tools and best practices to improve my work. Right now, I'm looking for opportunities to grow as a developer and contribute to meaningful, real -world projects .
+    <main class="grid">
+      <!-- left column -->
+      <section>
+        <div class="card about fade-up" style="animation-delay:.05s">
+          <div style="display:flex;gap:18px">
+            <div class="photo">MS</div>
+            <div>
+              <h2 style="margin:0 0 8px 0">About</h2>
+              <p>
+                I'm a MERN Stack Developer skilled in MongoDB, Express.js, React.js, and Node.js. I build full-stack web applications from scratch — front-end, back-end, and deployment. I enjoy solving real-world problems with clean, efficient code and continuously learning new tools and best practices.
+              </p>
 
-      </p>
-    </section>
+              <div class="skills" id="skills" style="margin-top:12px">
+                <div class="skill">Node.js</div>
+                <div class="skill">Express.js</div>
+                <div class="skill">React.js</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Git</div>
+                <div class="skill">Bootstrap</div>
+                <div class="skill">Python</div>
+                <div class="skill">Custom Node.js framework</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>React.js</li>
-        <li>MongoDB</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>Bootstrap</li>
-        <li>Python</li>
-        <li>Custom Node.js framework</li>
-      </ul>
-    </section>
+        <div class="card" style="margin-top:18px" id="projects">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <h2 style="margin:0">Projects</h2>
+            <div class="small muted">Live demos & docs</div>
+          </div>
 
-    <section>
-        <h2>Projects</h2>
+          <div class="projects-list" style="margin-top:12px">
+            <!-- Project 1 -->
+            <article class="project fade-up" style="animation-delay:.08s">
+              <h3>Trustail Wallet (Payment Demo)</h3>
+              <p class="muted">A demo wallet application built to practice secure payment gateway integration. No real transactions processed.</p>
+              <div class="meta">
+                <span class="chip">Node.js</span>
+                <span class="chip">Payments</span>
+                <span class="chip">Docs</span>
+              </div>
+              <div class="actions">
+                <a class="link" target="_blank" rel="noopener" href="https://trustail-wallet.onrender.com/">Open Live Demo</a>
+                <a class="link" target="_blank" rel="noopener" href="https://trustail-wallet.onrender.com/lib-docs-node">Open Docs</a>
+                <button class="link" data-project="trustail-wallet" onclick="openModal('trustail-wallet')">Details</button>
+              </div>
+            </article>
 
-        <p><strong>E-Commerce Web App</strong><br />
-        <p> A demo wallet application built to practice secure payment gateway integration for real-world projects.</p>
-        <p> Designed as a learning-focused model for developers exploring e-commerce and digital payments.</p>
-        <p> No real transactions processed – ensuring a safe environment for testing and experimentation.</p>
-        <p> Helps in understanding end-to-end payment workflows in modern web applications.</p>
-        <p> ■ Live Demo: <a href="https://trustail-wallet.onrender.com/">https://trustail-wallet.onrender.com/</a></p>
-        <p> ■ Docs: <a href="https://trustail-wallet.onrender.com/lib-docs-node">https://trustail-wallet.onrender.com/lib-docs-node</a></p>
+            <!-- Project 2 -->
+            <article class="project fade-up" style="animation-delay:.11s">
+              <h3>Trustail (E-Commerce)</h3>
+              <p class="muted">Scalable e-commerce web app built as a learning project — explore auth, product flows and payment demos.</p>
+              <div class="meta">
+                <span class="chip">MERN</span>
+                <span class="chip">Auth</span>
+              </div>
+              <div class="actions">
+                <a class="link" target="_blank" rel="noopener" href="https://trustail.onrender.com/">Open Live Demo</a>
+                <div class="note">Sample user: <strong>7025337150</strong> / password: <strong>test123</strong></div>
+                <button class="link" onclick="openModal('trustail')">Details</button>
+              </div>
+            </article>
 
-        
-        <p><strong>E-Commerce Web App</strong><br />
-        Sample User : 7025337150 <br /> password : test123 </p>
-        <p>Url : <a href="https://trustail.onrender.com">https://trustail.onrender.com</a></p>
-        <p><strong>Todo / Mail Web App </strong><br />
-        Sample User : test@gmail.com <br /> password : test123 
-        </p>
-        <p>Url : <a href="https://mskv-todo-84t8.onrender.com">https://mskv-todo-84t8.onrender.com</a></p>
-        <p>Url : <a href="https://mskv-todo-84t8.onrender.com/mail">https://mskv-todo-84t8.onrender.com/mail</a></p>
-        
-    </section>
+            <!-- Project 3 -->
+            <article class="project fade-up" style="animation-delay:.14s">
+              <h3>Todo / Mail Web App</h3>
+              <p class="muted">Productivity app combining todo lists and a simple mail interface. Built to practice state management and CRUD ops.</p>
+              <div class="meta">
+                <span class="chip">React</span>
+                <span class="chip">Node.js</span>
+              </div>
+              <div class="actions">
+                <a class="link" target="_blank" rel="noopener" href="https://mskv-todo-84t8.onrender.com/">Open Todo</a>
+                <a class="link" target="_blank" rel="noopener" href="https://mskv-todo-84t8.onrender.com/mail">Open Mail</a>
+                <button class="link" onclick="openModal('todo-mail')">Details</button>
+              </div>
+            </article>
+          </div>
+        </div>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Biology Science Plus Two</strong><br />
-      GHSS Kavanur, Malappuram <br />
-      Expected Completion: March 2025</p>
-      <p>I started studying Web Development in 2023 using self-research.</p>
-    </section>
+        <div class="card" style="margin-top:18px">
+          <h2 style="margin:0 0 8px 0">Education</h2>
+          <div class="edu">
+            <div><strong>GHSS Kavanur, Malappuram</strong></div>
+            <div class="muted small">Biology Science Plus Two — Expected Completion: March 2025</div>
+            <div style="margin-top:8px" class="muted small">Started learning Web Development (self-taught) in 2023.</div>
+          </div>
+        </div>
 
-    <section>
-      <h2>Activities & Honors</h2>
-      <ul>
-        <li>Research or explore something new in technology</li>
-        <li>Create my own technology like frameworks and UIs using my own methods</li>
-        <li>CSS styling</li>
-      </ul>
-    </section>
+      </section>
 
-    <section>
-      <h2>Languages</h2>
-      <div class="languages">
-        <div class="lang-item">Malayalam (First Language)</div>
-        <div class="lang-item">English </div>
-      </div>
-    </section>
+      <!-- right column -->
+      <aside class="right">
+        <div class="card fade-up" style="animation-delay:.05s">
+          <div class="section-title">
+            <h3 style="margin:0">Contact</h3>
+            <div class="small muted">Available for work & collaboration</div>
+          </div>
 
-    <footer>
-      &copy; 2025 Muhammed Sinan K V
+          <div class="contact-list" id="contact">
+            <div class="contact-item"><strong>Email:</strong>&nbsp;<a class="external" href="mailto:muhammedsinankv06@gmail.com">muhammedsinankv06@gmail.com</a></div>
+            <div class="contact-item"><strong>Phone:</strong>&nbsp;<a class="external" href="tel:+917025337150">+91 7025337150</a></div>
+            <div class="contact-item"><strong>Portfolio:</strong>&nbsp;<a class="external" href="https://mskv17.github.io/portfolio/" target="_blank" rel="noopener">mskv17.github.io/portfolio</a></div>
+            <div class="contact-item"><strong>Live apps:</strong></div>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-left:8px;margin-top:6px">
+              <a class="link" target="_blank" rel="noopener" href="https://trustail-wallet.onrender.com/">Trustail Wallet Demo</a>
+              <a class="link" target="_blank" rel="noopener" href="https://trustail.onrender.com/">Trustail E-Commerce</a>
+              <a class="link" target="_blank" rel="noopener" href="https://mskv-todo-84t8.onrender.com/">Todo / Mail App</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 8px 0">Activities & Honors</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);line-height:1.6">
+            <li>Research & exploration of new technologies</li>
+            <li>Building custom frameworks and UI patterns</li>
+            <li>CSS styling and front-end polish</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3 style="margin:0 0 8px 0">Languages</h3>
+          <div class="muted small">Malayalam (Native), English</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="fade-up" style="animation-delay:.18s">
+      Built by <strong>Muhammed Sinan K V</strong> • © <span id="year"></span>
     </footer>
   </div>
 
+  <!-- modal -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal" role="document" aria-modal="true" aria-labelledby="modalTitle">
+      <div style="display:flex;align-items:center;gap:12px">
+        <h4 id="modalTitle">Project details</h4>
+        <button class="close" aria-label="Close" onclick="closeModal()">✕</button>
+      </div>
+      <div id="modalBody" style="margin-top:12px;color:var(--muted)"></div>
+    </div>
+  </div>
+
+  <script>
+    // basic behaviors
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // Modal content for projects
+    const modal = document.getElementById('modalBackdrop');
+    const modalBody = document.getElementById('modalBody');
+
+    function openModal(key){
+      let html = '';
+      if(key === 'trustail-wallet'){
+        html = `
+          <p><strong>Trustail Wallet</strong> — Demo wallet to practice payment gateway integration. Designed for learning payment flows; no real transactions processed.</p>
+          <p class="muted small">Live demo: <a class="external" href="https://trustail-wallet.onrender.com" target="_blank">trustail-wallet.onrender.com</a></p>
+          <p class="muted small">Docs: <a class="external" href="https://trustail-wallet.onrender.com/lib-docs-node" target="_blank">lib-docs-node</a></p>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Tech: Node.js, Express, React, MongoDB</li>
+            <li>Focus: Secure integration, sandbox flows, docs for developers</li>
+          </ul>
+        `;
+      } else if(key === 'trustail'){
+        html = `
+          <p><strong>Trustail (E-Commerce)</strong> — A learning-focused e-commerce platform demonstrating product pages, carts, auth, and payment flows.</p>
+          <p class="note"><strong>Sample user:</strong> 7025337150 / <strong>test123</strong></p>
+          <p class="muted small">Live: <a class="external" href="https://trustail.onrender.com" target="_blank">trustail.onrender.com</a></p>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Tech: MERN stack, JWT auth</li>
+            <li>Focus: API design, transactions (demo), responsive UI</li>
+          </ul>
+        `;
+      } else if(key === 'todo-mail'){
+        html = `
+          <p><strong>Todo / Mail Web App</strong> — Productivity app that combines todos and a simple mail UI to practice CRUD operations and state management.</p>
+          <p class="muted small">Live: <a class="external" href="https://mskv-todo-84t8.onrender.com" target="_blank">mskv-todo-84t8.onrender.com</a></p>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Tech: React, Node.js, Express</li>
+            <li>Focus: UX for tasks, simple mail interface, local & server sync</li>
+          </ul>
+        `;
+      } else {
+        html = '<p>Project information not found.</p>'
+      }
+
+      modalBody.innerHTML = html;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    // close modal on backdrop click
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+
+    // keyboard close
+    window.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeModal();
+    });
+
+    // reveal animations: add .fade-up already present; ensure they run after load
+    window.addEventListener('load', function(){
+      document.querySelectorAll('.fade-up').forEach((el, i) => {
+        const d = (i * 60) + 50;
+        el.style.animationDelay = (d/1000) + 's';
+      });
+    });
+  </script>
 </body>
 </html>
