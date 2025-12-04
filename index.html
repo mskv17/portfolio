@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -850,6 +854,10 @@
           <span>HTML</span>
         </div>
         <div class="skill-item fade-in">
+          <i class="fa-solid fa-lock skill-icon"></i>
+          <span>Crypto Web API</span>
+        </div>
+        <div class="skill-item fade-in">
           <i class="devicon-css3-plain skill-icon"></i>
           <span>CSS</span>
         </div>
@@ -879,6 +887,74 @@
     <!-- Projects Section -->
     <section id="projects" class="section">
       <h2 class="section-title fade-in">Projects</h2>
+
+      <!-- SecuroTalk — End-to-End Encrypted Messaging -->
+      <div class="project-card fade-in" style="margin-bottom: 2rem;">
+        <h3 class="project-title">SecuroTalk</h3>
+        <p class="project-description">
+          End-to-end encrypted messaging web app focused on maximum privacy and
+          user control (text + voice notes).
+        </p>
+
+        <ul class="project-features">
+          <li>
+            End-to-end encryption for text & voice (hybrid encryption / Crypto
+            Web API)
+          </li>
+          <li>
+            Real-time messaging via Socket.io (double-tick delivery receipts)
+          </li>
+          <li>
+            Delete for me & Delete for everyone (remote delete on recipients'
+            client)
+          </li>
+          <li>Account creation + sign-in (Google auth via Firebase)</li>
+          <li>Single-device-per-account enforcement (session binding)</li>
+          <li>
+            Presence: online / last seen / typing indicators / recording
+            indicator
+          </li>
+          <li>
+            No server-side message storage — conversation data persisted in
+            user's browser (IndexedDB)
+          </li>
+          <li>
+            Real-time delivery when recipient is online; queued encrypted
+            payloads otherwise
+          </li>
+        </ul>
+
+        <div class="project-links">
+          <!-- Replace with real URLs when available -->
+          <a href="https://chat-app-4z3x.onrender.com" target="_blank"
+            >Live App</a
+          >
+          <!-- <a href="https://github.com/your-username/securotalk" target="_blank"
+            >Source</a
+          > -->
+        </div>
+
+        <div
+          style="margin-top: 0.5rem; color: var(--accent); font-size: 0.9rem"
+        >
+          Auth: Google + Firebase · Current: single-device support · Next:
+          mobile app
+        </div>
+
+        <div
+          style="
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+          "
+        >
+          Privacy model (short): only sender & recipient can decrypt
+          messages/voice. The server relays encrypted blobs and never has
+          decryption keys. Conversation metadata minimized and primary storage
+          is client-side IndexedDB.
+        </div>
+      </div>
+
       <div class="projects-grid">
         <!-- Payment Service Wallet -->
         <div class="project-card fade-in">
