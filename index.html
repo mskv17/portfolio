@@ -318,11 +318,33 @@
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
     };
-
+    let readedSections = new Map();
+    let lastSection = null;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          const firstClass = entry.target.classList[0];
+            if(firstClass === "section-title") {
+                lastSection = entry.target.textContent;
+              if(entry.target.textContent && !readedSections.has(entry.target.textContent)) {
+                setTimeout(()=>{
+                  let s = entry.target.textContent;
+                  readedSections.set(s);
+                  if(lastSection === s) {
+                    const pref = s.toLowerCase().replace(/\s/g, "_");
+                    trackEvent(`${pref}_10s_engaged`);
+                  }
+                }, 10000)
+                setTimeout(()=>{
+                  let s = entry.target.textContent;
+                  if(lastSection === s) {
+                    const pref = s.toLowerCase().replace(/\s/g, "_");
+                    trackEvent(`${pref}_30s_engaged`);
+                  }
+                }, 30000)
+              }
+            }
         }
       });
     }, observerOptions);
@@ -369,6 +391,7 @@
       });
     });
   </script>
+  <script type="module" src="/portfolio/module.js"></script>
 </body>
 
 </html>
