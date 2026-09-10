@@ -5,69 +5,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammed Sinan K V - Full Stack Web Developer</title>
+  <meta name="description"
+    content="Portfolio of Muhammed Sinan K V - Full Stack Web Developer specializing in MERN stack, real-time messaging, Web Crypto API, and scalable web architectures." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="/portfolio/style.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>MSKV<span class="brand-bracket"> /&gt;</span> .dev
+      </a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1 class="name">Muhammed Sinan K V</h1>
-      <p class="title">Full Stack Web Developer</p>
-      <p class="location">📍 Malappuram, India</p>
-      <div class="contact-info">
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:muhammedsinankv06@gmail.com">muhammedsinankv06@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span>📱</span>
-          <a href="tel:7025337150">7025337150</a>
-        </div>
-        <div class="contact-item">
-          <span>🌐</span>
-          <a href="https://mskv17.github.io/portfolio/" target="_blank">Portfolio</a>
-        </div>
+      <div class="status-badge fade-in">
+        <span class="status-indicator"></span>
+        <span>Available for Opportunities & Roles</span>
       </div>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      <h1 class="name fade-in">Muhammed Sinan K V</h1>
+      <p class="title fade-in">Full Stack Web Developer</p>
+      <p class="location fade-in">📍 Malappuram, Kerala, India</p>
+
+      <div class="contact-info fade-in">
+        <a href="mailto:muhammedsinankv06@gmail.com" class="contact-pill">
+          <i class="fa-regular fa-envelope"></i>
+          <span>muhammedsinankv06@gmail.com</span>
+        </a>
+        <a href="tel:7025337150" class="contact-pill">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 7025337150</span>
+        </a>
+        <a href="https://mskv17.github.io/portfolio/" target="_blank" class="contact-pill">
+          <i class="fa-solid fa-globe"></i>
+          <span>Live Portfolio</span>
+        </a>
+      </div>
+
+      <div class="cta-buttons fade-in">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Get in Touch</span>
+          <i class="fa-regular fa-paper-plane"></i>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="section">
-    <h2 class="section-title fade-in">About Me</h2>
-    <div class="summary fade-in">
-      <p>
-        Results-driven MERN Stack Developer with practical experience in building and deploying end-to-end web
-        applications using MongoDB, Express.js, React.js, and Node.js. Skilled in developing scalable back-end APIs,
-        responsive front-end interfaces, and secure application architectures. Delivered multiple live projects
-        including a real-time messaging platform, e-commerce system, and productivity applications. Known for
-        problem-solving ability, clean coding practices, and continuous learning. Actively seeking a challenging role to
-        contribute technical skills to real-world products.
-      </p>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-user-tie"></i> Overview</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-card fade-in">
+      <div class="summary">
+        <p>
+          Results-driven MERN Stack Developer with practical experience in building and deploying end-to-end web
+          applications using MongoDB, Express.js, React.js, and Node.js. Skilled in developing scalable back-end APIs,
+          responsive front-end interfaces, and secure application architectures. Delivered multiple live projects
+          including a real-time messaging platform, e-commerce systems, and productivity applications. Known for
+          problem-solving ability, clean coding practices, and continuous learning. Actively seeking a challenging role
+          to
+          contribute technical skills to real-world products.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="highlight-text">
+            <h4>Full-Stack Architecture</h4>
+            <p>End-to-end MERN applications with scalable APIs and modular client code.</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="highlight-text">
+            <h4>Security & Cryptography</h4>
+            <p>Hybrid Web Crypto API encryption, zero-server retention & secure authentication.</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="highlight-text">
+            <h4>Real-Time & Progressive</h4>
+            <p>Socket.io bidirectional event streaming, offline-first IndexedDB & PWA.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="section">
-    <h2 class="section-title fade-in">Skills</h2>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-code"></i> Technologies</span>
+      <h2 class="section-title">Skills & Expertise</h2>
+    </div>
     <div class="skills-grid">
       <div class="skill-item fade-in">
         <i class="devicon-nodejs-plain skill-icon"></i>
@@ -130,116 +192,235 @@
 
   <!-- Projects Section -->
   <section id="projects" class="section">
-    <h2 class="section-title fade-in">Projects</h2>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Engineering</span>
+      <h2 class="section-title">Featured Projects</h2>
+    </div>
 
-    <!-- SecuroTalk — End-to-End Encrypted Messaging -->
-    <div class="project-card fade-in" style="margin-bottom: 2rem;">
-      <h3 class="project-title">SecuroTalk</h3>
-      <p class="project-description">
-        End-to-end encrypted messaging web app focused on maximum privacy and
-        user control (text + media).
-      </p>
+    <!-- Project Category Tabs -->
+    <div class="project-tabs-container fade-in">
+      <div class="project-tabs" role="tablist" aria-label="Project Categories">
+        <button type="button" class="project-tab-btn active" role="tab" id="tab-btn-client" aria-selected="true"
+          aria-controls="panel-client-projects" data-tab="client">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Client Projects</span>
+          <span class="tab-badge">1</span>
+        </button>
 
-      <ul class="project-features">
-        <li>
-          End-to-end encrypted communication for text, voice, and images
-          (Hybrid Encryption using Web Crypto API)
-        </li>
-
-        <li>
-          No server-side message storage — conversation data persisted in user's browser (IndexedDB)
-        </li>
-
-        <li>
-          Real-time messaging via Socket.io (double-tick delivery receipts)
-        </li>
-
-        <li>
-          Real-time push notifications for new messages even when the app is closed (FCM + Service Worker)
-        </li>
-
-        <li>
-          Real-time delivery when recipient is online; queued encrypted payloads otherwise
-        </li>
-
-        <li>
-          Single-device-per-account enforcement (session binding)
-        </li>
-
-        <li>
-          Delete for me & Delete for everyone (remote delete on recipient's client)
-        </li>
-
-        <li>
-          Presence: online / last seen / typing indicators / recording indicator
-        </li>
-
-        <li>
-          Custom media UI: audio player for voice notes and thumbnail previews for images with one-click full-resolution
-          download
-        </li>
-
-        <li>
-          Account creation + sign-in (Google auth via Firebase)
-        </li>
-
-        <li>
-          Progressive Web App (PWA) support for installable chat experience
-        </li>
-      </ul>
-
-      <div class="project-links">
-        <!-- Replace with real URLs when available -->
-        <a href="https://chat-app-4z3x.onrender.com" target="_blank">Live App</a>
-        <!-- <a href="https://github.com/your-username/securotalk" target="_blank"
-            >Source</a
-          > -->
-      </div>
-      <div style="
-            margin-top: 0.5rem;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-          ">
-        Privacy model (short): Only the recipient can decrypt messages (text and all media).
-        The server relays encrypted blobs and never has access to decryption keys.
-        Conversation metadata is minimized, and primary storage is client-side (IndexedDB).
+        <button type="button" class="project-tab-btn" role="tab" id="tab-btn-self" aria-selected="false"
+          aria-controls="panel-self-projects" data-tab="self">
+          <i class="fa-solid fa-code"></i>
+          <span>Self Projects</span>
+          <span class="tab-badge">3</span>
+        </button>
       </div>
     </div>
 
-    <div class="projects-grid">
-      <!-- Payment Service Wallet -->
-      <div class="project-card fade-in">
-        <h3 class="project-title">Payment Service – Wallet App</h3>
-        <p class="project-description">
-          A demo wallet application built to practice secure payment gateway
-          integration for real-world projects.
-        </p>
-        <ul class="project-features">
-          <li>Designed as a learning-focused model for developers</li>
-          <li>Safe testing environment</li>
-          <li>End-to-end payment workflows</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://trustail-wallet.onrender.com/" target="_blank">Live Demo</a>
-          <a href="https://trustail-wallet.onrender.com/lib-docs-node" target="_blank">Docs</a>
+    <!-- Tab Panels Container -->
+    <div class="project-tab-panels">
+      <!-- Client Projects Tab Panel (Default Active) -->
+      <div id="panel-client-projects" class="project-tab-panel active" role="tabpanel" aria-labelledby="tab-btn-client">
+        <!-- Red Clove Literature: Flagship Client Showcase -->
+        <div class="featured-project fade-in">
+          <div class="featured-badge client-badge">
+            <i class="fa-solid fa-briefcase"></i> Featured Client Project
+          </div>
+          <h3 class="project-title">Red Clove Literature — Literary Publishing Platform</h3>
+          <p class="project-description">
+            A premium publishing showcase platform designed to present books, authors, publishers, events, and the Red
+            Clove Literature brand, with publishing inquiries and direct WhatsApp ordering.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">MERN</span>
+            <span class="tech-tag">Cloudinary</span>
+            <span class="tech-tag">SEO</span>
+          </div>
+
+          <div class="features-matrix">
+            <div class="feature-pill">
+              <i class="fa-solid fa-book-open"></i>
+              <span><strong>Book Catalogue:</strong> English &amp; Malayalam search with real-time discovery.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-users"></i>
+              <span><strong>Author &amp; Publisher Discovery:</strong> Dedicated profiles &amp; brand publication
+                hubs.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span><strong>WhatsApp Ordering:</strong> WhatsApp-based book ordering &amp; publishing inquiries.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-sliders"></i>
+              <span><strong>Custom Admin Panel:</strong> Complete dashboard with role-based management.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-share-nodes"></i>
+              <span><strong>Dynamic SEO:</strong> Search engine optimization &amp; dynamic social sharing cards.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <span><strong>Responsive Premium UI:</strong> High-fidelity experience with multilingual content.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span><strong>Cloudinary Media:</strong> Image management &amp; media optimization pipeline.</span>
+            </div>
+          </div>
+
+          <div class="client-callout">
+            <strong>Client Solution:</strong> Engineered end-to-end for Red Clove Literature, integrating literary
+            discovery, dynamic Malayalam/English SEO indexing, and real-time commerce engagement.
+          </div>
+
+          <div class="project-links">
+            <a href="https://redcloveliterature.com" target="_blank" rel="noopener noreferrer"
+              class="project-link-btn primary">
+              <span>Visit Website</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <!-- BlogSphere -->
-      <div class="project-card fade-in">
-        <h3 class="project-title">BlogSphere – AI-Powered Blog Platform</h3>
-        <p class="project-description">
-          A full-stack web application for writing, editing, and publishing
-          blogs with AI assistance.
-        </p>
-        <ul class="project-features">
-          <li>AI-powered content generation</li>
-          <li>Manual writing option</li>
-          <li>Blog management system</li>
-          <li>Real-time preview</li>
-          <li>User authentication</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://blogsphere-032t.onrender.com" target="_blank">Visit Site</a>
+
+      <!-- Self Projects Tab Panel (Hidden by default) -->
+      <div id="panel-self-projects" class="project-tab-panel" role="tabpanel" aria-labelledby="tab-btn-self"
+        style="display: none;">
+        <!-- SecuroTalk: Flagship Showcase -->
+        <div class="featured-project fade-in">
+          <div class="featured-badge">
+            <i class="fa-solid fa-star"></i> Featured Flagship Project
+          </div>
+          <h3 class="project-title">SecuroTalk — End-to-End Encrypted Messaging</h3>
+          <p class="project-description">
+            End-to-end encrypted messaging web platform engineered for maximum privacy and user autonomy. Messages,
+            voice
+            memos, and image media are encrypted client-side using hybrid cryptography before transit, ensuring zero
+            plaintext exposure to intermediate relays.
+          </p>
+
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Socket.io</span>
+            <span class="tech-tag">Web Crypto API</span>
+            <span class="tech-tag">IndexedDB</span>
+            <span class="tech-tag">Firebase Auth</span>
+            <span class="tech-tag">FCM Notifications</span>
+            <span class="tech-tag">PWA</span>
+          </div>
+
+          <div class="features-matrix">
+            <div class="feature-pill">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span><strong>Hybrid Cryptography:</strong> E2E encryption for text, voice notes, and media via Web Crypto
+                API.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-database"></i>
+              <span><strong>Zero Server Storage:</strong> All chat records and keys persist strictly in user browser
+                IndexedDB.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-bolt"></i>
+              <span><strong>Real-time Sockets:</strong> Double-tick delivery receipts, typing indicators, and presence
+                telemetry.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-bell"></i>
+              <span><strong>Push Notifications:</strong> Background alerts for new encrypted payloads even when app is
+                inactive.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-trash-can"></i>
+              <span><strong>Remote Deletion:</strong> Granular "Delete for me" and remote "Delete for everyone"
+                sync.</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <span><strong>PWA &amp; Custom Media:</strong> Installable mobile experience with custom voice player
+                &amp; full-res
+                downloads.</span>
+            </div>
+          </div>
+
+          <div class="privacy-callout">
+            <strong>Privacy Architecture:</strong> Only the intended recipient can decrypt messages. The backend relays
+            encrypted ciphertext blobs and never has access to private decryption keys or plaintext metadata.
+          </div>
+
+          <div class="project-links">
+            <a href="https://chat-app-4z3x.onrender.com" target="_blank" class="project-link-btn primary">
+              <span>Launch Live App</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Secondary Projects Grid -->
+        <div class="projects-grid">
+          <!-- Payment Service Wallet -->
+          <div class="project-card fade-in">
+            <h3 class="project-title">Payment Service – Wallet App</h3>
+            <p class="project-description">
+              A full-stack demo wallet application developed to simulate and master secure payment gateway integrations
+              for
+              enterprise workflows.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Payment APIs</span>
+              <span class="tech-tag">REST</span>
+            </div>
+            <ul class="project-features">
+              <li>Developer-first architectural model</li>
+              <li>Safe sandbox testing environment</li>
+              <li>End-to-end payment &amp; ledger workflows</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://trustail-wallet.onrender.com/" target="_blank" class="project-link-btn primary">
+                <span>Live Demo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://trustail-wallet.onrender.com/lib-docs-node" target="_blank"
+                class="project-link-btn secondary">
+                <span>Docs</span>
+                <i class="fa-solid fa-book-open"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- BlogSphere -->
+          <div class="project-card fade-in">
+            <h3 class="project-title">BlogSphere – AI-Powered Blog</h3>
+            <p class="project-description">
+              A full-stack publishing platform enabling writers to produce, edit, and publish blogs augmented with
+              intelligent AI writing assistance.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">AI API</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <ul class="project-features">
+              <li>AI-assisted content generation &amp; drafting</li>
+              <li>Comprehensive blog editorial management</li>
+              <li>Real-time live preview with user authentication</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://blogsphere-032t.onrender.com" target="_blank" class="project-link-btn primary">
+                <span>Visit Site</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -247,66 +428,116 @@
 
   <!-- Education Section -->
   <section id="education" class="section">
-    <h2 class="section-title fade-in">Education</h2>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic</span>
+      <h2 class="section-title">Education</h2>
+    </div>
     <div class="education-item fade-in">
-      <h3 class="education-title">Biology Science Plus Two</h3>
+      <div class="education-header">
+        <h3 class="education-title">Biology Science Plus Two</h3>
+        <span class="education-date">Expected Completion: March 2025</span>
+      </div>
       <p class="education-school">GHSS Kavanur, Malappuram</p>
-      <p class="education-date">Expected Completion: March 2025</p>
-      <p style="margin-top: 1rem; color: var(--text-secondary)">
-        I started studying Web Development in 2023 using self-research.
+      <p class="education-desc">
+        Pursuing Higher Secondary with a focus on science, while simultaneously advancing full-stack software
+        development expertise through independent research and real-world project deployments since 2023.
       </p>
     </div>
   </section>
 
   <!-- Activities Section -->
   <section id="activities" class="section">
-    <h2 class="section-title fade-in">Activities & Honors</h2>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-award"></i> Highlights</span>
+      <h2 class="section-title">Activities & Honors</h2>
+    </div>
     <div class="activities-list">
-      <div class="activity-item fade-in">🔬 Research & Explore</div>
-      <div class="activity-item fade-in">🛠️ Create Own Technologies</div>
-      <div class="activity-item fade-in">🎨 CSS Styling</div>
+      <div class="activity-item fade-in">
+        <div class="activity-icon-wrap">🔬</div>
+        <div class="activity-content">
+          <h4>Research & Explore</h4>
+          <p>Deep diving into web protocols, hybrid cryptographic algorithms, and performance.</p>
+        </div>
+      </div>
+      <div class="activity-item fade-in">
+        <div class="activity-icon-wrap">🛠️</div>
+        <div class="activity-content">
+          <h4>Create Own Technologies</h4>
+          <p>Engineering custom real-time systems, SDK integrations, and full-stack modules.</p>
+        </div>
+      </div>
+      <div class="activity-item fade-in">
+        <div class="activity-icon-wrap">🎨</div>
+        <div class="activity-content">
+          <h4>CSS & Modern UI</h4>
+          <p>Designing proportional, accessible, high-performance responsive interfaces.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Languages Section -->
   <section id="languages" class="section">
-    <h2 class="section-title fade-in">Languages</h2>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-solid fa-language"></i> Communication</span>
+      <h2 class="section-title">Languages</h2>
+    </div>
     <div class="languages">
       <div class="language-item fade-in">
         <div class="language-name">Malayalam</div>
-        <div class="language-level">First Language</div>
+        <div class="language-level">First Language / Native</div>
       </div>
       <div class="language-item fade-in">
         <div class="language-name">English</div>
-        <div class="language-level">Proficient</div>
+        <div class="language-level">Proficient Working Proficiency</div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
   <footer id="contact" class="section">
-    <h2 class="section-title fade-in">Get In Touch</h2>
-    <div class="contact-info" style="justify-content: center">
-      <div class="contact-item">
-        <span>📧</span>
-        <a href="mailto:muhammedsinankv06@gmail.com">muhammedsinankv06@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span>💬</span>
-        <a href="tel:7025337150">7025337150</a>
-      </div>
-      <div class="contact-item">
-        <span>🌐</span>
-        <a href="https://mskv17.github.io/portfolio/" target="_blank">Portfolio</a>
-      </div>
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Get In Touch</span>
+      <h2 class="section-title fade-in">Get In Touch</h2>
+      <p class="section-subtitle">
+        Have a project idea, seeking a MERN developer, or want to discuss opportunities? I'd love to connect.
+      </p>
     </div>
-    <p style="margin-top: 2rem; color: var(--text-secondary)">
-      © 2024 Muhammed Sinan K V.️
-    </p>
+
+    <div class="contact-cards-grid fade-in">
+      <a href="mailto:muhammedsinankv06@gmail.com" class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <span class="contact-card-label">Email</span>
+        <span class="contact-card-value">muhammedsinankv06@gmail.com</span>
+      </a>
+
+      <a href="tel:7025337150" class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <span class="contact-card-label">Phone</span>
+        <span class="contact-card-value">+91 7025337150</span>
+      </a>
+
+      <a href="https://mskv17.github.io/portfolio/" target="_blank" class="contact-card">
+        <div class="contact-card-icon">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <span class="contact-card-label">Portfolio</span>
+        <span class="contact-card-value">mskv17.github.io/portfolio</span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Muhammed Sinan K V. All rights reserved.</p>
+      <p>Built with proportional design, responsive layout, and modern web standards.</p>
+    </div>
   </footer>
 
   <!-- Scroll to Top Button -->
-  <div class="scroll-top" id="scrollTop"></div>
+  <div class="scroll-top" id="scrollTop" aria-label="Scroll to top"></div>
 
   <script>
     // Smooth scroll animation on scroll
@@ -321,29 +552,29 @@
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           const firstClass = entry.target.classList[0];
-            if(firstClass === "section-title") {
-                lastSection = entry.target.textContent;
-              if(entry.target.textConten === "Get In Touch" && !readedSections.has(entry.target.textContent)) {
-                return trackEvent('scrolled_untill_end');
-              }
-              if(entry.target.textContent && !readedSections.has(entry.target.textContent)) {
-                setTimeout(()=>{
-                  let s = entry.target.textContent;
-                  readedSections.set(s);
-                  if(lastSection === s) {
-                    const pref = s.toLowerCase().replace(/\s/g, "_");
-                    trackEvent(`${pref}_10s_engaged`);
-                  }
-                }, 10000)
-                setTimeout(()=>{
-                  let s = entry.target.textContent;
-                  if(lastSection === s) {
-                    const pref = s.toLowerCase().replace(/\s/g, "_");
-                    trackEvent(`${pref}_30s_engaged`);
-                  }
-                }, 30000)
-              }
+          if (firstClass === "section-title") {
+            lastSection = entry.target.textContent.trim();
+            if (entry.target.textContent.trim() === "Get In Touch" && !readedSections.has(entry.target.textContent.trim())) {
+              if (typeof trackEvent === 'function') trackEvent('scrolled_untill_end');
             }
+            if (entry.target.textContent && !readedSections.has(entry.target.textContent.trim())) {
+              setTimeout(() => {
+                let s = entry.target.textContent.trim();
+                readedSections.set(s, true);
+                if (lastSection === s) {
+                  const pref = s.toLowerCase().replace(/\s/g, "_");
+                  if (typeof trackEvent === 'function') trackEvent(`${pref}_10s_engaged`);
+                }
+              }, 10000);
+              setTimeout(() => {
+                let s = entry.target.textContent.trim();
+                if (lastSection === s) {
+                  const pref = s.toLowerCase().replace(/\s/g, "_");
+                  if (typeof trackEvent === 'function') trackEvent(`${pref}_30s_engaged`);
+                }
+              }, 30000);
+            }
+          }
         }
       });
     }, observerOptions);
@@ -352,10 +583,46 @@
       observer.observe(el);
     });
 
+    // Project Tabs Filter Switching
+    const projectTabButtons = document.querySelectorAll(".project-tab-btn");
+    const projectTabPanels = document.querySelectorAll(".project-tab-panel");
+
+    projectTabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("active")) return;
+
+        const targetTab = btn.getAttribute("data-tab");
+
+        // Update button active state & accessibility
+        projectTabButtons.forEach((b) => {
+          const isActive = b === btn;
+          b.classList.toggle("active", isActive);
+          b.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+
+        // Switch panels with smooth fade-in
+        projectTabPanels.forEach((panel) => {
+          if (panel.id === `panel-${targetTab}-projects`) {
+            panel.style.display = "block";
+            requestAnimationFrame(() => {
+              panel.classList.add("active");
+              // Ensure elements inside newly visible panel trigger fade-in
+              panel.querySelectorAll(".fade-in").forEach((el) => {
+                el.classList.add("visible");
+              });
+            });
+          } else {
+            panel.classList.remove("active");
+            panel.style.display = "none";
+          }
+        });
+      });
+    });
+
     // Animate skill icons with stagger effect
     const skillItems = document.querySelectorAll(".skill-item");
     skillItems.forEach((item, index) => {
-      item.style.animationDelay = `${index * 0.1}s`;
+      item.style.animationDelay = `${index * 0.05}s`;
     });
 
     // Scroll to top button
@@ -390,7 +657,7 @@
       });
     });
   </script>
-  <script type="module" src="/portfolio/module.js"></script>
+  <script type="module" src="./module.js"></script>
 </body>
 
 </html>
