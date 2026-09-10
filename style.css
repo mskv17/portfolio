@@ -584,9 +584,15 @@ nav a:hover {
   z-index: 1;
 }
 
+svg.skill-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .skill-item:hover .skill-icon {
   transform: scale(1.15);
   color: var(--primary-light);
+  fill: var(--primary-light);
 }
 
 .skill-item span {
@@ -1298,6 +1304,11 @@ footer.section {
 
   .skill-icon {
     font-size: 2rem;
+  }
+
+  svg.skill-icon {
+    width: 2rem;
+    height: 2rem;
   }
 
   .contact-cards-grid {
